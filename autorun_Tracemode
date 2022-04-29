@@ -1,3 +1,3 @@
 start cmd /c "node-red"  
-"C:\Users\Apple\Downloads\emqx-windows\emqx\bin\emqx.cmd" start
-"C:\Program Files (x86)\AdAstra Research Group\Trace Mode IDE 6\rtc.exe" "D:/Downloads/0.Softs/Scada/Projects/temp/1/RTM_1/1_0.dbb" /fullscreen /hidemenu /run
+start cmd /c "C:\Users\Apple\Downloads\emqx-windows\emqx\bin\emqx.cmd" start
+call "C:\Program Files (x86)\AdAstra Research Group\Trace Mode IDE 6\rtc.exe" "D:/Downloads/0.Softs/Scada/Projects/temp/1/RTM_1/1_0.dbb" /fullscreen /hidemenu /run
