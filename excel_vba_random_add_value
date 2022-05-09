@@ -1,0 +1,11 @@
+Private Sub CommandButton1_Click()
+Dim i As Integer
+Dim d As Date
+Randomize
+For i = 1 To 1000
+    Cells(i, 1).Value = DateAdd("h", i, Now)
+    Cells(i, 2).Value = i * 2 + Int((3 * Rnd) + 1)
+    Cells(i, 3).Value = i * 3 + Int((3 * Rnd) + 1)
+    Cells(i, 4).Value = i * 4 + Int((3 * Rnd) + 1)
+    Cells(i, 5).Value = i * 5 + Int((3 * Rnd) + 1)
+Next i
