@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
 a = [ 0,0,0,0,0,0,0.01,0.01,0.01,0.01,
         0.02,0.02,0.03,0.03,0.04,0.05,0.05,0.06,0.07,0.08,
         0.09,0.09,0.11,0.12,0.13,0.14,0.15,0.17,0.18,0.19,
@@ -16,11 +15,13 @@ a = [ 0,0,0,0,0,0,0.01,0.01,0.01,0.01,
         5.26,5.35,5.44,5.53,5.62,5.71,5.81,5.9,6,6.09,
         6.19,6.28,6.43,6.48,6.58,6.69,6.79,6.89,6.99,7.1,
         7.2,7.32,7.47,7.67,7.87,8.07 ]
-x = np.linspace(0, len(a)-1, len(a))
-y = a
-xvals = [10]
-yinterp = np.interp(xvals, x, y)
-plt.plot(x, y, 'o')
-plt.plot(xvals, yinterp, '-x')
-plt.show()
-yinterp
+def get_interpolation(value, array_interpolation):
+    x = np.linspace(0, len(array_interpolation)-1, len(array_interpolation))
+    y = array_interpolation
+    xvals = [value]
+    yinterp = np.interp(xvals, x, y)
+    plt.plot(x, y, 'o')
+    plt.plot(xvals, yinterp, '-x')
+    plt.show()
+    return yinterp[0]
+get_interpolation(10, a)
