@@ -46,3 +46,42 @@ class db:
                 type(e).__name__,  # TypeError
                 e.__traceback__.tb_lineno
             )
+            
+    def create(self):
+        try:
+            # cursor = self.conn.cursor()
+            sql = """CREATE TABLE rasxod3 (
+                                ID    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                                SN_modem   TEXT NOT NULL,
+                                IDN INT  NOT  NULL,
+                                AVG_VOLUME REAL DEFAULT 0.0,
+                                VOLUME     REAL  DEFAULT 0.0,
+                                COUNTER    INT  DEFAULT 0,
+                                TIME_T     INT NOT NULL
+                                )"""
+            self.conn.execute(sql)
+            print("Created table rasxod")
+        except Exception as e:
+            print(e, type(e).__name__, __file__, e.__traceback__.tb_lineno)
+
+#         INSERT INTO rasxod VALUES(2885,'860344049635593',1,0.0,0.0,0,1645632255,NULL,NULL);
+#         INSERT INTO rasxod VALUES(2886,'860344049636385',1,0.0,0.0,0.020000000000000000416,1645632255,NULL,NULL);
+#         INSERT INTO rasxod VALUES(2887,'860344049623227',1,0.0,0.0,0.010000000000000000208,1645632256,NULL,NULL);
+#         INSERT INTO rasxod VALUES(2888,'868956047386655',1,0.0,0.0,334915.80999999999766,1645632256,NULL,NULL);
+
+ 
+    
+    def insert(self):
+        
+        cursor = self.conn.cursor()
+        
+        sql = "INSERT INTO rasxod3 VALUES('1','860344049635593',1,1,1,0,1645632255);"
+        
+        cursor.execute(sql)
+        self.conn.commit()
+        sql = "SELECT * FROM rasxod2;"
+        cursor.execute(sql)
+        myresult = cursor.fetchall()
+        for i in myresult:
+            print(i)
+        cursor.close()
