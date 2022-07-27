@@ -1,0 +1,8 @@
+alias v='source ~root/modbus_3/www/env/bin/activate'
+alias p='v && python3'
+alias cdlogic='v && cd modbus_3/www/project_backend/backend/logic'
+alias cdlogic2='v && cd modbus_3/www/project_temp/backend/logic'
+alias run='v && nohup python3 modbus_3/www/project_backend/manage.py runserver 0.0.0.0:9000 >/dev/null 2>&1 &'
+alias runsync2='v && python3 modbus_3/www/project_temp/manage.py runserver 0.0.0.0:9001'
+alias sd='v && python3 modbus_3/www/project_backend/backend/logic/db_sqlLite.py'
+alias cdtest='cd modbus_3/tests'
