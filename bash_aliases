@@ -1,4 +1,4 @@
-alias v='source ~root/modbus_3/www/env/bin/activate'
+alias v='source ~root/modbus_3/env/bin/activate'
 alias p='v && python3'
 alias cdlogic='v && cd ~root/modbus_3/www/project_backend/backend/logic'
 alias cdlogic2='v && cd ~root/modbus_3/www/project_temp/backend/logic'
